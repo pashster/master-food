@@ -1,3 +1,5 @@
 *
 !public/
 !.gitignore
+!food_seed/
+!res_seed/

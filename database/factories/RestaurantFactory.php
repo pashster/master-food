@@ -2,8 +2,6 @@
 
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Storage;
 
 class RestaurantFactory extends PictureFactory
 {
