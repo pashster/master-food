@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@if(Auth::check())
+    @section('cart-section')
+        @include('cart')
+    @endsection
+@endif
+
 @section('componentcss')
     <style>
         .bg {
@@ -43,7 +49,8 @@
                                 {{$f->desc}}
                             </span>
                             <div class="top">
-                                <a href="#" class="btn btn-sm btn-outline-primary bi bi-cart add-to-cart" data-food-id="{{$f->id}}">
+                                <a href="#" class="btn btn-sm btn-outline-primary bi bi-cart add-to-cart"
+                                   data-food-id="{{$f->id}}">
                                     Add to cart
                                 </a>
                             </div>

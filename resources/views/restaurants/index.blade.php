@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@if(Auth::check())
+    @section('cart-section')
+        @include('cart')
+    @endsection
+@endif
+
 @section('content')
     <div class="row">
         <div class="col">
