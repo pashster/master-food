@@ -4,5 +4,41 @@
 // Variables
 @import 'variables';
 
+@import 'pictures';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+
+.res-title {
+    position: relative;
+    color: white;
+    font-size: 33px;
+    background-color: #000000ba;
+    bottom: 50%;
+    border-radius: 3px;
+}
+
+.price {
+    position: relative;
+    top: 12px;
+    left: 12px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    width: 120px;
+}
+
+.res-description {
+    position: relative;
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    text-align: justify;
+    bottom: 50%;
+}
+
+.shops {
+    height: 300px;
+}

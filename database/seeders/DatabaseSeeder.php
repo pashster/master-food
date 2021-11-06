@@ -13,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $rs = \App\Models\Restaurant::factory()->count(15)->create();
+        $rs->each(function($restaurant) {
+           \App\Models\Food::factory()->count(rand(5, 8))->for($restaurant)->create();
+        });
     }
 }

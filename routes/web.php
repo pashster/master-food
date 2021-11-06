@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [App\Http\Controllers\RestaurantController::class, 'index'])->name('home');
+Route::resources([
+    'restaurants' => App\Http\Controllers\RestaurantController::class,
+    'foods' => App\Http\Controllers\FoodController::class,
+]);
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
