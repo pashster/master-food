@@ -2,7 +2,7 @@
 
 @if(Auth::check())
     @section('cart-section')
-        @include('cart')
+        @include('carts.cart')
     @endsection
 @endif
 

@@ -19,6 +19,7 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+//        session()->remove('products');
         $restaurants = Restaurant::paginate(8);
         return view('restaurants.index', compact('restaurants'));
     }

@@ -1,12 +1,31 @@
 @extends('layouts.app')
 
 @if(Auth::check())
-    @section('cart-section')
-        @include('cart')
-    @endsection
+@section('cart-section')
+    @include('carts.cart')
+@endsection
 @endif
 
 @section('content')
+    @if(session('success'))
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success">
+                    {{session('success')}}
+                </div>
+            </div>
+        </div>
+    @endif
+
+    @if(session('error'))
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-danger">
+                    {{session('error')}}
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="row">
         <div class="col">
             <h3>Restaurants</h3>
